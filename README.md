@@ -1,3 +1,5 @@
-#### gvim配置需要
+#### vimrc相关备份 ####
 
-* python支持
+gvimrc
+vimrc
+vimrc.bundles

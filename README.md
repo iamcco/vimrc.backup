@@ -1,3 +1,8 @@
-#### gvim配置需要
+#### 字体相关备份 ####
 
-* python支持
+./FONTS
+└─PowerlineConsolas
+        Powerline Consolas Bold Italic.ttf
+        Powerline Consolas Bold.ttf
+        Powerline Consolas Italic.ttf
+        Powerline Consolas.ttf

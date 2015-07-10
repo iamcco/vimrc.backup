@@ -50,7 +50,7 @@
     set formatoptions+=B                                                    " 合并两行中文时，不在中间加空格：
     set guifont=Powerline_Consolas:h12
     set background=dark                                                     " Assume a dark background
-    set nowrap                                                              " Do not wrap long lines
+    "set nowrap                                                              " Do not wrap long lines
     set autoindent                                                          " Indent at the same level of the previous line
     set smartindent
     set shiftwidth=4                                                        " Use indents of 4 spaces
@@ -434,6 +434,7 @@
         autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
         autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
         autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
+        autocmd FileType java set omnifunc=javacomplete#Complete
 
         " Enable heavy omni completion.
         if !exists('g:neocomplcache_force_omni_patterns')
@@ -637,7 +638,6 @@
         let NERDTreeMouseMode=2
         let NERDTreeShowHidden=1
         let NERDTreeKeepTreeInNewTab=1
-        let g:nerdtree_tabs_open_on_gui_startup=0
         autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | end
 
     " }

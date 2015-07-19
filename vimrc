@@ -592,8 +592,8 @@
 
         call textobj#user#plugin('html', {
         \   'keyVal': {
-        \     'pattern': '[0-9a-zA-Z_-]\+="[0-9a-zA-Z_-]\+"',
-        \     'select': ['ah', 'ih'],
+        \     'pattern': ' *[0-9a-zA-Z_-]\+ *= *"[0-9a-zA-Z_-]\+"',
+        \     'select': ['ak', 'ik'],
         \   },
         \ })
 

@@ -83,6 +83,7 @@
         Plugin 'terryma/vim-expand-region'    " 选中区块
         Plugin 'spf13/vim-autoclose'          " 自动关闭
         Plugin 'vim-scripts/matchit.zip'      " 标签对跳转
+        Plugin 'kana/vim-textobj-user'
         " 显示marks - 方便自己进行标记和跳转
         " m[a-zA-Z] add mark
         " '[a-zA-Z] go to mark
@@ -96,7 +97,6 @@
     " vim显示相关插件 {
         Plugin 'bling/vim-airline'
         Plugin 'scrooloose/nerdtree'
-        Plugin 'jistr/vim-nerdtree-tabs'
         Plugin 'sjl/gundo.vim'  "文件历史插件
     " }
 

@@ -582,9 +582,20 @@
     " vim-multiple-cursors {
 
         let g:multi_cursor_next_key='<C-m>'
-        let g:multi_cursor_prev_key='<C-k>'
+        let g:multi_cursor_prev_key='<C-p>'
         let g:multi_cursor_skip_key='<C-x>'
         let g:multi_cursor_quit_key='<Esc>'
+
+    " }
+
+    " textobj-user {
+
+        call textobj#user#plugin('html', {
+        \   'keyVal': {
+        \     'pattern': '[0-9a-zA-Z_-]\+="[0-9a-zA-Z_-]\+"',
+        \     'select': ['ah', 'ih'],
+        \   },
+        \ })
 
     " }
 
@@ -620,7 +631,10 @@
 
     " NerdTree {
 
-        map <leader>e <plug>NERDTreeTabsToggle<CR>
+        map <leader>e :NERDTreeToggle<CR>
+        autocmd VimEnter * NERDTree
+        wincmd w
+        autocmd VimEnter * wincmd w
 
         let NERDTreeShowBookmarks=1
         let NERDTreeIgnore=['\.py[cd]$', '\~$', '\.swo$', '\.swp$', '^\.git$', '^\.hg$', '^\.svn$', '\.bzr$']
@@ -630,19 +644,6 @@
         let NERDTreeShowHidden=1
         let NERDTreeKeepTreeInNewTab=1
         autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | end
-
-    " }
-
-    " vim-nerdtree-tabs {
-
-        map <Leader>mt <plug>NERDTreeTabsToggle<CR>
-        map <Leader>nn <plug>NERDTreeMirrorToggle<CR>
-        " 关闭同步
-        let g:nerdtree_tabs_synchronize_view=0
-        let g:nerdtree_tabs_synchronize_focus=0
-        "是否自动开启nerdtree
-        let g:nerdtree_tabs_open_on_gui_startup=1
-        let g:nerdtree_tabs_open_on_console_startup=1
 
     " }
 

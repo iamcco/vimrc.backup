@@ -17,6 +17,7 @@
         Plugin 'altercation/vim-colors-solarized' " 主题solarized
         Plugin 'tomasr/molokai'                   " molokai配色方案
     " }
+
     " vimshell {
         Plugin 'Shougo/vimproc.vim'
         Plugin 'Shougo/vimshell.vim'

@@ -129,13 +129,7 @@
 
 " Vim UI {
 
-    if filereadable(expand("$HOME/.vim/bundle/vim-colors-solarized/colors/solarized.vim"))
-        let g:solarized_termcolors=256
-        let g:solarized_termtrans=1
-        let g:solarized_contrast="normal"
-        let g:solarized_visibility="normal"
-        color solarized             " Load a colorscheme
-    endif
+    colorscheme molokai
 
     " 插入模式下用绝对行号, 普通模式下用相对 {
         au FocusLost * :set norelativenumber number
@@ -185,8 +179,8 @@
             color Monokai
         else
             "窗口设置
-            winpos 140 30            " 指定窗口出现的位置，坐标原点在屏幕左上角
-            set lines=34 columns=120 " 指定窗口大小，lines为高度，columns为宽度
+            winpos 2 0            " 指定窗口出现的位置，坐标原点在屏幕左上角
+            set lines=38 columns=160 " 指定窗口大小，lines为高度，columns为宽度
 
             " 显示/隐藏菜单栏、工具栏、滚动条，可用 Ctrl + F11 切换
             set guioptions-=m
@@ -222,15 +216,14 @@
     let g:browsers = {}
     let g:browsers['chrome'] = "c:/Program\ Files\ (x86)/Google/Chrome/Application/chrome.exe"
     function! ViewFile()
-        exec "call Top_window()"
         exec "silent !start " . g:browsers['chrome'] . " %:p"
     endfunction
 
-    " Wrapped lines goes down/up to next row, rather than next line in file.
+    "j/k统一为上一相对行和下一相对行，而不是绝对行
     noremap j gj
     noremap k gk
 
-    " Stupid shift key fixes
+    "容易按错的键位修正
     if has("user_commands")
         command! -bang -nargs=* -complete=file E e<bang> <args>
         command! -bang -nargs=* -complete=file W w<bang> <args>
@@ -244,10 +237,10 @@
     endif
     cmap Tabe tabe
 
-    " Yank from the cursor to the end of the line, to be consistent with C and D.
+    "复制到行尾，行为向C和D
     nnoremap Y y$
 
-    " Code folding options
+    "代码折叠配置
     nmap <leader>f0 :set foldlevel=0<CR>
     nmap <leader>f1 :set foldlevel=1<CR>
     nmap <leader>f2 :set foldlevel=2<CR>
@@ -520,7 +513,6 @@
         "依赖ag sudo apt-get install silversearcher-ag
         let g:ctrlsf_position = 'bottom'
         nmap <leader>f <Plug>CtrlSFPrompt
-        vmap <leader>fs <Plug>CtrlSFVwordExec
         nmap <leader>fw <Plug>CtrlSFCwordPath
 
     " }
@@ -617,12 +609,11 @@
 
     " vim-airline {
 
-        let g:airline_theme='luna'
+        let g:airline_theme='molokai'
         let g:airline_powerline_fonts=1
         if !exists('g:airline_symbols')
           let g:airline_symbols = {}
         endif
-        let g:airline_symbols.whitespace = ''
         let g:airline#extensions#tabline#enabled = 1
 
     " }
@@ -634,7 +625,7 @@
         let NERDTreeShowBookmarks=1
         let NERDTreeIgnore=['\.py[cd]$', '\~$', '\.swo$', '\.swp$', '^\.git$', '^\.hg$', '^\.svn$', '\.bzr$']
         let NERDTreeChDirMode=0
-        let NERDTreeQuitOnOpen=1
+        let NERDTreeQuitOnOpen=0
         let NERDTreeMouseMode=2
         let NERDTreeShowHidden=1
         let NERDTreeKeepTreeInNewTab=1
@@ -650,8 +641,8 @@
         let g:nerdtree_tabs_synchronize_view=0
         let g:nerdtree_tabs_synchronize_focus=0
         "是否自动开启nerdtree
-        let g:nerdtree_tabs_open_on_gui_startup = 0
-        "let g:nerdtree_tabs_open_on_console_startup=1
+        let g:nerdtree_tabs_open_on_gui_startup=1
+        let g:nerdtree_tabs_open_on_console_startup=1
 
     " }
 

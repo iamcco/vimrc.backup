@@ -129,7 +129,8 @@
 
 " Vim UI {
 
-    colorscheme molokai
+    "colorscheme molokai
+    colorscheme solarized
 
     " 插入模式下用绝对行号, 普通模式下用相对 {
         au FocusLost * :set norelativenumber number
@@ -423,7 +424,7 @@
 
         " Enable omni completion.
         autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
-        autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
+        autocmd FileType html,markdown,String,string setlocal omnifunc=htmlcomplete#CompleteTags
         autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
         autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
         autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
@@ -445,6 +446,7 @@
     " closetag 自动补全html/xml标签 {
 
         let g:closetag_html_style=1
+        autocmd BufRead,BufNewFile *.{String,string} set filetype=html
 
     " }
 
@@ -464,9 +466,9 @@
 
     " vim-javascript {
 
-        let g:html_indent_inctags = 'html,body,head,tbody'
-        let g:html_indent_script1 = 'inc'
-        let g:html_indent_style1 = 'inc'
+        "let g:html_indent_inctags = 'html,body,head,tbody'
+        "let g:html_indent_script1 = 'inc'
+        "let g:html_indent_style1 = 'inc'
         let g:jsdoc_default_mapping = '0'
         map <leader>sf :call JsBeautify()<cr>
         autocmd FileType javascript noremap <buffer>  <leader>sf :call JsBeautify()<cr>
@@ -620,7 +622,8 @@
 
     " vim-airline {
 
-        let g:airline_theme='molokai'
+        "let g:airline_theme='molokai'
+        let g:airline_theme='luna'
         let g:airline_powerline_fonts=1
         if !exists('g:airline_symbols')
           let g:airline_symbols = {}

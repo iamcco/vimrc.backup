@@ -11,6 +11,7 @@
         Plugin 'flazz/vim-colorschemes' " 各种颜色主题
         Plugin 'godlygeek/tabular'      " 对齐插件
         Plugin 'Yggdroot/indentLine'    " 对齐线
+        Plugin 'majutsushi/tagbar'
     " }
 
     " colorscheme 颜色主题 {
@@ -36,6 +37,7 @@
         Plugin 'docunext/closetag.vim'      " 自动补全html/xml标签
         Plugin 'hail2u/vim-css3-syntax'
         Plugin 'gorodinskiy/vim-coloresque' " CSS颜色插件
+        Plugin 'digitaltoad/vim-jade'
     " }
 
     " javascript {

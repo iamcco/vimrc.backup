@@ -501,6 +501,12 @@
 
     " }
 
+    " markdown-preview {
+"
+        let g:mkdp_path_to_chrome = "c:/Program\ Files\ (x86)/Google/Chrome/Application/chrome.exe"
+
+    " }
+
     " PyMode python-syntax {
 
         " Disable if python support not present
@@ -635,9 +641,9 @@
     " NerdTree {
 
         map <leader>e :NERDTreeToggle<CR>
-        autocmd VimEnter * NERDTree
-        wincmd w
-        autocmd VimEnter * wincmd w
+        "autocmd VimEnter * NERDTree
+        "wincmd w
+        "autocmd VimEnter * wincmd w
 
         let NERDTreeShowBookmarks=1
         let NERDTreeIgnore=['\.py[cd]$', '\~$', '\.swo$', '\.swp$', '^\.git$', '^\.hg$', '^\.svn$', '\.bzr$']

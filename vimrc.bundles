@@ -14,6 +14,10 @@
         Plugin 'majutsushi/tagbar'
     " }
 
+    " note {
+        Plugin 'iamcco/markdown-preview.vim'
+    " }
+
     " colorscheme 颜色主题 {
         Plugin 'altercation/vim-colors-solarized' " 主题solarized
         Plugin 'tomasr/molokai'                   " molokai配色方案

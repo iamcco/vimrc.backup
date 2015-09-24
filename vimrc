@@ -48,7 +48,7 @@
     set fileformats=unix,dos,mac                                            " 给出文件的<EOL>格式类型
     set formatoptions+=m                                                    " 如遇Unicode值大于255的文本，不必等到空格再折行。
     set formatoptions+=B                                                    " 合并两行中文时，不在中间加空格：
-    set guifont=Powerline_Consolas:h12
+    set guifont=Powerline_Consolas:h14
     set background=dark                                                     " Assume a dark background
     "set nowrap                                                              " Do not wrap long lines
     set autoindent                                                          " Indent at the same level of the previous line

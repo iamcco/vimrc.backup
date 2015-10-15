@@ -50,7 +50,8 @@
     set formatoptions+=B                                                    " 合并两行中文时，不在中间加空格：
     set guifont=Powerline_Consolas:h14
     set background=dark                                                     " Assume a dark background
-    "set nowrap                                                              " Do not wrap long lines
+    set nowrap                                                              " Do not wrap long lines
+    set synmaxcol=200                                                       " highlight最大的列数为200，200后的代码将没有高亮，防止处理含有特别长的行的时候，拖慢vim
     set autoindent                                                          " Indent at the same level of the previous line
     set smartindent
     set shiftwidth=4                                                        " Use indents of 4 spaces
@@ -425,7 +426,7 @@
         " Enable omni completion.
         autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
         autocmd FileType html,markdown,String,string setlocal omnifunc=htmlcomplete#CompleteTags
-        autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
+        "autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
         autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
         autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
         autocmd FileType java set omnifunc=javacomplete#Complete

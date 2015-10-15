@@ -45,6 +45,7 @@
     " }
 
     " javascript {
+        Plugin 'marijnh/tern_for_vim'
         Plugin 'jelera/vim-javascript-syntax' " javascript增强高亮显示, 放vim-javascript上面
         Plugin 'pangloss/vim-javascript'
         Plugin 'elzr/vim-json'

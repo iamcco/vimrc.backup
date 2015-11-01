@@ -24,8 +24,8 @@
     " }
 
     " vimshell {
-        Plugin 'Shougo/vimproc.vim'
-        Plugin 'Shougo/vimshell.vim'
+        "Plugin 'Shougo/vimproc.vim'
+        "Plugin 'Shougo/vimshell.vim'
     " }
 
     " 语言相关，字典、自动补全 {

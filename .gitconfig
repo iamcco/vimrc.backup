@@ -1,0 +1,10 @@
+[user]
+	name = 年糕小豆汤
+	email = ooiss@qq.com
+[push]
+	default = simple
+[core]
+	autocrlf = false
+	quotepath = off
+[gui]
+	encoding = utf-8
